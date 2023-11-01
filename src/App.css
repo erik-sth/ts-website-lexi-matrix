@@ -1,0 +1,14 @@
+.pixelboard {
+}
+.pixel {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.075);
+}
+.black {
+	background-color: #07070a1a;
+}
+.white {
+	background-color: rgb(255, 255, 255);
+}
