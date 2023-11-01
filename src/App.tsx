@@ -15,7 +15,7 @@ function App() {
 	}, []);
 	const [words, setWords] = useState<string[]>([]);
 	const [currentWord, setCurrentWord] = useState<string>('');
-
+	const [width, setWidth] = useState<number>(19);
 	const addWord = (word: string) => {
 		setWords([...words, word]);
 	};
@@ -35,8 +35,17 @@ function App() {
 			</div>
 			<div className='center'>
 				<div>
-					<h1 className='heading'>Pixelboard</h1>
-					<Pixelboard height={5} width={19} word={currentWord} />
+					<span className='container'>
+						<h1 className='heading'>Pixelboard</h1>
+						<input
+							type='range'
+							value={width}
+							min='4'
+							max='24'
+							onChange={(e) => setWidth(parseInt(e.target.value))}
+						></input>
+					</span>
+					<Pixelboard height={5} width={width} word={currentWord} />
 				</div>
 			</div>
 		</>

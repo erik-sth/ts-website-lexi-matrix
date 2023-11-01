@@ -4,6 +4,11 @@
 	height: 20px;
 	border: 1px solid rgba(0, 0, 0, 0.075);
 }
+.container {
+	display: flex;
+	justify-content: space-between;
+	width: 420px;
+}
 .black {
 	background-color: #07070a1a;
 }
