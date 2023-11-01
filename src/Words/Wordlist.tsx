@@ -4,7 +4,7 @@ interface Props {
 	allWords: string[];
 	onClick: (currentString: string) => void;
 	addWord: (word: string) => void;
-	deleteWord: (word: string) => void;
+	deleteWord: (index: number) => void;
 }
 
 const WordList = ({ allWords, onClick, addWord, deleteWord }: Props) => {
@@ -45,7 +45,7 @@ const WordList = ({ allWords, onClick, addWord, deleteWord }: Props) => {
 						>
 							{word}
 						</button>
-						<button onClick={() => deleteWord(word)}>X</button>
+						<button onClick={() => deleteWord(index)}>X</button>
 					</li>
 				))}
 			</ul>

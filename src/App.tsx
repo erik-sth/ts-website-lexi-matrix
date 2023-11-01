@@ -19,8 +19,8 @@ function App() {
 	const addWord = (word: string) => {
 		setWords([...words, word]);
 	};
-	const deleteWord = (word: string) => {
-		setWords(words.filter((w) => w !== word));
+	const deleteWord = (index: number) => {
+		setWords(words.filter((_w, i) => index != i));
 	};
 	return (
 		<>
