@@ -1,6 +1,7 @@
 html {
 	background: linear-gradient(135deg, #24272b, #07070a);
 	min-height: 100vh;
+	min-width: 100vw;
 }
 body {
 	margin: 0;

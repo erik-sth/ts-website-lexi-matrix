@@ -1,9 +1,12 @@
-.wordlist {
-	float: left;
-	height: 90vh;
-	overflow-y: scroll;
-	padding: 0;
+@media screen and (min-width: 4000px) {
+	.wordlist {
+		float: left;
+		height: 90vh;
+		overflow-y: scroll;
+		padding: 0;
+	}
 }
+
 ul {
 	list-style-type: none;
 	padding: 0;
