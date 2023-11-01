@@ -1,6 +1,7 @@
 import { FormEvent } from 'react';
 import './Wordlist.css';
 import UploadWordsButton from './UploadWordsButton';
+import DownloadWordButton from './DownloadWordButton';
 interface Props {
 	allWords: string[];
 	onClick: (currentString: string) => void;
@@ -42,17 +43,22 @@ const WordList = ({ allWords, onClick, addWord, deleteWord }: Props) => {
 			</form>
 			<UploadWordsButton addWords={addWords} />
 			<ul>
-				{allWords.map((word, index) => (
-					<li key={index}>
-						<button
-							style={{ width: '100%' }}
-							onClick={() => onClick(word)}
-						>
-							{word}
-						</button>
-						<button onClick={() => deleteWord(index)}>X</button>
-					</li>
-				))}
+				<span>
+					{allWords.map((word, index) => (
+						<li key={index}>
+							<button
+								style={{ width: '100%' }}
+								onClick={() => onClick(word)}
+							>
+								{word}
+							</button>
+							<button onClick={() => deleteWord(index)}>X</button>
+						</li>
+					))}
+				</span>
+				<li>
+					<DownloadWordButton words={allWords} />
+				</li>
 			</ul>
 		</div>
 	);
