@@ -30,7 +30,7 @@ const WordList = ({ allWords, onClick, addWord, deleteWord }: Props) => {
 					pattern={'^[a-zA-Z]+$'}
 					className='input'
 					name='textInput'
-					placeholder='Enter text'
+					placeholder='Enter word'
 				/>
 				<button className='btn' type='submit'>
 					Add
