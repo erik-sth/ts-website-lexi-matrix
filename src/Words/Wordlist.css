@@ -1,4 +1,4 @@
-@media screen and (min-width: 4000px) {
+@media screen and (min-width: 500px) {
 	.wordlist {
 		float: left;
 		height: 90vh;
@@ -21,8 +21,11 @@ li > button {
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid black;
-	padding: 15px 60px;
+	padding: 10px;
 	font-size: large;
+}
+li > button + button {
+	padding-right: 20px;
 }
 
 .wordUpload {
