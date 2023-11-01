@@ -21,3 +21,17 @@ li > button {
 	padding: 15px 60px;
 	font-size: large;
 }
+
+.wordUpload {
+	color: rgb(16, 94, 184);
+	padding-left: 10px;
+	font-size: small;
+}
+
+.wordUpload:hover {
+	color: blue;
+	text-decoration: underline;
+}
+.wordUpload > input {
+	display: none;
+}

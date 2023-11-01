@@ -1,5 +1,6 @@
 import { FormEvent } from 'react';
 import './Wordlist.css';
+import UploadWordsButton from './UploadWordsButton';
 interface Props {
 	allWords: string[];
 	onClick: (currentString: string) => void;
@@ -23,6 +24,9 @@ const WordList = ({ allWords, onClick, addWord, deleteWord }: Props) => {
 			inputElement.value = '';
 		}
 	};
+	const addWords = (words: string[]) => {
+		words.forEach((word) => addWord(word));
+	};
 	return (
 		<div>
 			<form onSubmit={handleFormSubmit}>
@@ -36,6 +40,7 @@ const WordList = ({ allWords, onClick, addWord, deleteWord }: Props) => {
 					Add
 				</button>
 			</form>
+			<UploadWordsButton addWords={addWords} />
 			<ul>
 				{allWords.map((word, index) => (
 					<li key={index}>
