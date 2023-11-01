@@ -4,6 +4,7 @@ import Pixelboard from './Matrix/Pixelboard';
 import { setCharSetToLocalStorage } from './utils/Coordinates';
 import charToCoordinates from './Data/CharSet';
 import WordList from './Words/Wordlist';
+import { Nav } from './Nav/Nav';
 
 function App() {
 	useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
 	};
 	return (
 		<>
+			<Nav width={19} allWords={words} />
 			<div className='wordlist'>
 				<WordList
 					allWords={words}

@@ -1,10 +1,7 @@
 .heading {
 	color: white;
 }
-.wordlist {
-	float: left;
-	height: 100vh;
-}
+
 .pixelboard {
 }
 .pixel {
@@ -29,6 +26,10 @@
 }
 .btn:hover {
 	background-color: #0172e2;
+}
+.btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
 }
 .input {
 	padding: 7px 5px;

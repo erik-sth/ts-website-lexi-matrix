@@ -1,4 +1,6 @@
 .wordlist {
+	float: left;
+	height: 90vh;
 	overflow-y: scroll;
 	padding: 0;
 }
