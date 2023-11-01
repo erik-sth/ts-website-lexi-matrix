@@ -1,6 +1,22 @@
 html {
 	background: linear-gradient(135deg, #24272b, #07070a);
 	min-height: 100vh;
+}
+body {
+	margin: 0;
+}
+.center {
 	display: flex;
 	justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+	color: white;
 }
