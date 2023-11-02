@@ -25,7 +25,7 @@ const DownloadPdfButton = ({ width, height, words }: Props) => {
 			for (let j = 0; j < saved[0][0].length; j++) {
 				const position: string = number_map[j] + (k + 1);
 				if (j == 0 && k == 0) {
-					pdf.addTitel(position);
+					pdf.addTitel('Position: ' + position);
 				} else {
 					pdf.addPageWithTitle(position);
 				}
