@@ -1,6 +1,6 @@
-import Matrix from '../Class/Matrix';
-import PDFGenerator from '../Class/Pdf';
-import { number_map } from '../Data/numberToChar';
+import Matrix from '../../Class/Matrix';
+import PDFGenerator from '../../Class/Pdf';
+import { number_map } from '../../Data/numberToChar';
 
 interface Props {
 	words: string[];

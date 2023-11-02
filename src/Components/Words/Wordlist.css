@@ -1,9 +1,12 @@
 @media screen and (min-width: 500px) {
 	.wordlist {
-		float: left;
-		height: 90vh;
-		overflow-y: scroll;
 		padding: 0;
+		height: 90vh;
+		overflow-y: auto;
+	}
+	.wordlist-container {
+		float: left;
+		border-right: 1px solid rgba(0, 0, 0, 0.733);
 	}
 }
 
@@ -14,7 +17,7 @@ ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 86vh;
+	min-height: 70vh;
 }
 
 li {

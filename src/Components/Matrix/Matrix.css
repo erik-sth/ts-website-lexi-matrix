@@ -1,0 +1,6 @@
+.pixel {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid rgba(44, 44, 44, 0.308);
+}

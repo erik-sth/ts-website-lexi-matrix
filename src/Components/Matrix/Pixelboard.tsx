@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
-import Matrix from '../Class/Matrix';
-import { createEmptyMatrix } from '../utils/Matrix';
-
+import Matrix from '../../Class/Matrix';
+import { createEmptyMatrix } from '../../utils/Matrix';
+import './Matrix.css';
 interface Props {
 	height: number;
 	width: number;
