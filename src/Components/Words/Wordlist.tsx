@@ -33,7 +33,6 @@ const WordList = ({ allWords, onClick, addWord, deleteWord }: Props) => {
 			<div className='wordlist'>
 				<form onSubmit={handleFormSubmit}>
 					<input
-						pattern={'^[a-zA-Z]+$'}
 						className='input'
 						name='textInput'
 						placeholder='Enter word'

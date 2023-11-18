@@ -1,4 +1,3 @@
-
 const DevelopedBy = () => {
 	return <div>DevelopedBy</div>;
 };

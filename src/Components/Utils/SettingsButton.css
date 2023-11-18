@@ -1,0 +1,27 @@
+.filter {
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgba(0, 0, 0, 0.192);
+	cursor: pointer;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.021);
+	transition: all 0.3s;
+	background-color: rgba(0, 0, 0, 0.411);
+}
+
+.filter svg {
+	height: 16px;
+	fill: rgb(255, 255, 255);
+	transition: all 0.3s;
+}
+.filter:hover {
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+	background-color: rgb(66, 66, 66);
+}
+.filter:hover svg {
+	fill: white;
+}

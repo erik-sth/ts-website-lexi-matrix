@@ -30,8 +30,8 @@ class Matrix {
 		for (let i = 0; i < word.length; i++) {
 			const char = word[i].toUpperCase();
 			const coordinates = getCharSetFromLocalStorage()[char];
-
-			if (currentXPosition + coordinates[0].length > this.width) {
+			const length = char == ' ' ? 0 : coordinates[0].length;
+			if (currentXPosition + length > this.width) {
 				this.failed = true;
 				break;
 			}
@@ -44,7 +44,7 @@ class Matrix {
 				}
 			}
 
-			currentXPosition += coordinates[0].length + 1;
+			currentXPosition += length + 1;
 		}
 
 		return this;

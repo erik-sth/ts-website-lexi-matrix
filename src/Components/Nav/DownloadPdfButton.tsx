@@ -21,13 +21,17 @@ const DownloadPdfButton = ({ width, height, words }: Props) => {
 	function createDoc() {
 		const pdf = new PDFGenerator();
 		calc();
-		for (let k = 0; k < saved[0].length; k++) {
+		let counter = 0;
+		for (let k = saved[0].length - 1; k + 1 > 0; k--) {
 			for (let j = 0; j < saved[0][0].length; j++) {
-				const position: string = number_map[j] + (k + 1);
-				if (j == 0 && k == 0) {
-					pdf.addTitel('Position: ' + position);
+				const position: string =
+					'Position: ' + number_map[4 - k] + (j + 1);
+				if ((j == 0 && k == saved[0].length) || counter < 6) {
+					pdf.addTitel(position);
+					counter++;
 				} else {
 					pdf.addPageWithTitle(position);
+					counter = 0;
 				}
 				for (let i = 0; i < words.length; i++) {
 					pdf.addContent(

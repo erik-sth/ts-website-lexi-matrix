@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Pixelboard from './Matrix/Pixelboard';
+import Pixelboard from './Components/Matrix/Pixelboard';
 import { setCharSetToLocalStorage } from './utils/Coordinates';
 import charToCoordinates from './Data/CharSet';
-import WordList from './Words/Wordlist';
-import { Nav } from './Nav/Nav';
+import WordList from './Components/Words/Wordlist';
+import { Nav } from './Components/Nav/Nav';
+import SettingsButton from './Components/Utils/SettingsButton';
+import Settings from './Settings';
 
 function App() {
 	useEffect(() => {
@@ -15,7 +17,8 @@ function App() {
 	}, []);
 	const [words, setWords] = useState<string[]>([]);
 	const [currentWord, setCurrentWord] = useState<string>('');
-	const [width, setWidth] = useState<number>(19);
+	const [width, setWidth] = useState<number>(13);
+	const [settingsVisible, setSettingsVisibilty] = useState<boolean>(false);
 	const addWord = (word: string) => {
 		setWords([...words, word]);
 	};
@@ -24,8 +27,8 @@ function App() {
 	};
 	return (
 		<>
-			<Nav width={19} allWords={words} />
-			<div className='wordlist'>
+			<Nav width={width} allWords={words} />
+			<div>
 				<WordList
 					allWords={words}
 					deleteWord={deleteWord}
@@ -36,18 +39,21 @@ function App() {
 			<div className='center'>
 				<div>
 					<span className='container'>
-						<h1 className='heading'>Pixelboard</h1>
-						<input
-							type='range'
-							value={width}
-							min='4'
-							max='24'
-							onChange={(e) => setWidth(parseInt(e.target.value))}
-						></input>
+						<h1 className='heading container'>
+							Pixelboard{' '}
+							<SettingsButton
+								onClick={() =>
+									setSettingsVisibilty(!settingsVisible)
+								}
+							/>
+						</h1>
 					</span>
 					<Pixelboard height={5} width={width} word={currentWord} />
 				</div>
 			</div>
+			{settingsVisible ? (
+				<Settings setWidth={setWidth} width={width} />
+			) : null}
 		</>
 	);
 }
